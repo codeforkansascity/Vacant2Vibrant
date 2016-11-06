@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Resources and Ideas for Revitalizing Vacant Properties</h1>
+  </div>
+
+  <table class="table">
+    <tr>
+      <th>Resource</th>
+      <th>Description</th>
+    </tr>
+    <tr ng-repeat="r in ctrl.resources">
+      <td class="lead">
+        <a ng-show="r.url" ng-href="{{r.url}}" target="_blank">{{r.name}}</a>
+        <span ng-hide="r.url">{{r.name}}</span>
+      </td>
+      <td>{{r.description}}</td>
+    </tr>
+  </table>
+
+</div>

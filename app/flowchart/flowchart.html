@@ -1,0 +1,51 @@
+<div clsas="row">
+  <div class="col-xs-9 col-xs-offset-3">
+    <h1>How to buy a property owned by {{ctrl.owner.name}}</h1>
+  </div>
+</div>
+
+<div class="row">
+
+  <!-- Side Nav -->
+  <div class="col-xs-3">
+    <h3>Contents</h3>
+    <ol>
+      <li>
+        <a ng-click="ctrl.showStep(null, null)">
+          About {{ctrl.owner.name}}</li>
+        </a>
+      <li ng-repeat="step in ctrl.steps">
+        <a ng-click="ctrl.showStep(step.sequence, 0)">
+        {{step.heading}}
+        </a>
+        <ul ng-show="step.substeps.length > 1">
+          <li ng-repeat="substep in step.substeps"
+            ng-show="substep.ownerContent[ctrl.owner.ownerId]">
+            <a ng-click="ctrl.showStep(step.sequence, $index)">
+              {{substep.heading}}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <div class="col-xs-9">
+
+    <!-- Intro/about landowner page -->
+    <div class="flow-step" ng-show="!ctrl.activeStep">
+      <h2>About {{ctrl.owner.name}}</h2>
+      <div ng-bind-html="ctrl.owner.introduction"></div>
+      <h3>Contact information</h3>
+      <div ng-bind-html="ctrl.owner.contact"></div>
+    </div>
+
+    <!-- Table cell -->
+    <div class="flow-step" ng-show="ctrl.activeStep">
+      <h2 ng-show="!ctrl.activeSubstep.heading">{{ctrl.activeStep.heading}}</h2>
+      <h2 ng-show="ctrl.activeSubstep.heading">{{ctrl.activeSubstep.heading}}</h2>
+      <div ng-bind-html="ctrl.activeSubstep.ownerContent[ctrl.owner.ownerId]"></div>
+    </div>
+
+  </div>
+</div>

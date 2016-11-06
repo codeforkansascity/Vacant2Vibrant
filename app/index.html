@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" ng-app="app" >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kansas City Vacant Property Rehabilitation</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- build:css ./v2v.min.css -->
+  <link rel="stylesheet" href="../_compiled/layout/fonts.css" />
+  <link rel="stylesheet" href="../_compiled/layout/main.css" />
+  <link rel="stylesheet" href="../_compiled/about/about.css" />
+  <link rel="stylesheet" href="../_compiled/flowchart/flowchart.css" />
+  <link rel="stylesheet" href="../_compiled/home/home.css" />
+  <link rel="stylesheet" href="../_compiled/menu/menu.css" />
+  <link rel="stylesheet" href="../_compiled/resources/resources.css" />
+  <link rel="stylesheet" href="../_compiled/search/search.css" />
+  <!-- /build -->
+
+</head>
+<body>
+
+<div class="container">
+  <ng-include src="'./menu/menu.html'" ng-controller="MenuCtrl as ctrl"></ng-include>
+  <ng-view></ng-view>
+</div>
+
+<!-- build:js ./v2v.min.js -->
+<script src="../lib/markdown/markdown.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-route/angular-route.js"></script>
+<script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="../_compiled/app-module.js"></script>
+<script src="../_compiled/app-config.js"></script>
+
+<script src="../_compiled/services/google-spreadsheet-data.js"></script>
+<script src="../_compiled/services/flowchart-store.js"></script>
+<script src="../_compiled/services/resource-store.js"></script>
+
+<script src="../_compiled/about/about-ctrl.js"></script>
+<script src="../_compiled/flowchart/flowchart-ctrl.js"></script>
+<script src="../_compiled/home/home-ctrl.js"></script>
+<script src="../_compiled/menu/menu-ctrl.js"></script>
+<script src="../_compiled/resources/resources-ctrl.js"></script>
+<script src="../_compiled/search/search-ctrl.js"></script>
+
+
+
+
+<!-- /build -->
+
+
+</body>
+</html>

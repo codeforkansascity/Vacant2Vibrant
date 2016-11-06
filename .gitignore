@@ -1,0 +1,19 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# packages
+node_modules/*
+bower_components/*
+
+# compiled files & sourcemaps
+*.map
+_compiled/*
+.sass-cache/*
+
+# build files
+build/
+
+# template files
+./app/services/service-template.js
+./app/component-template/*
