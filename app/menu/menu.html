@@ -10,6 +10,21 @@
       <li ng-class="{active: ctrl.activePage === 'about'}">
         <a href="#/about">About</a>
       </li>
+
+      <!-- TEMP: links to each land owner -->
+      <li ng-class="{active: ctrl.activePage === 'flowchart' && ctrl.params.ownerId === 'landbank'}">
+        <a href="#/flowchart/landbank">Land Bank</a>
+      </li>
+      <li ng-class="{active: ctrl.activePage === 'flowchart' && ctrl.params.ownerId === 'homesteadingauthority'}">
+        <a href="#/flowchart/homesteadingauthority">Homesteading Authority</a>
+      </li>
+      <li ng-class="{active: ctrl.activePage === 'flowchart' && ctrl.params.ownerId === 'government'}">
+        <a href="#/flowchart/government">Government</a>
+      </li>
+      <li ng-class="{active: ctrl.activePage === 'flowchart' && ctrl.params.ownerId === 'private'}">
+        <a href="#/flowchart/private">Private</a>
+      </li>
+
     </ul>
   </div>
 </nav>
